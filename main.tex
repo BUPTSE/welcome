@@ -1,13 +1,20 @@
 \documentclass[UTF8]{ctexart}
 % \usepackage{xeCJK}
+
+\xeCJKDeclareCharClass{CJK}{`①,`②,`③,`④,`⑤,`⑥,`⑦,`⑧,`⑨,`⑩,`⑪,`⑫,`⑬,`⑭,`⑮,`⑯,`⑰,`⑱,`⑲,`⑳,`■,`◇,`⋯}
+
 \usepackage{cancel}
 \usepackage{graphicx}
+\usepackage{longtable}
+\usepackage{multirow}
 \usepackage{hyperref}
 \hypersetup{
-    hidelinks,
+    colorlinks,
+    linkcolor=black,
     pdftitle={北邮沙河生存手册R},
     pdfauthor={北邮软件工程根据地\ 群}
 }
+
 \newcommand{\faq}[1]{{\heiti #1}}
 
 \title{\textbf{北邮沙河生存手册R}}
@@ -27,7 +34,7 @@
 \tableofcontents
 \newpage
 
-% 新生报道
+% 新生报到
 \input{tex/registration.tex}
 
 % 校区环境
