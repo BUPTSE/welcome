@@ -3,17 +3,28 @@
 
 \xeCJKDeclareCharClass{CJK}{`①,`②,`③,`④,`⑤,`⑥,`⑦,`⑧,`⑨,`⑩,`⑪,`⑫,`⑬,`⑭,`⑮,`⑯,`⑰,`⑱,`⑲,`⑳,`☆,`★,`⭕,`●,`□,`■,`◇,`⋯}
 
-\usepackage{cancel}
+% \usepackage{cancel}
 \usepackage{graphicx}
 \usepackage{longtable}
 \usepackage{multirow}
 \usepackage{hyperref}
+\usepackage{bbding}
+\usepackage{tabularray}
+\usepackage[normalem]{ulem}
+
 \hypersetup{
     colorlinks,
     linkcolor=black,
     pdftitle={北邮沙河生存手册R},
     pdfauthor={北邮软件工程根据地\ 群}
 }
+
+\DefTblrTemplate{caption-tag}{normal}{表}
+\DefTblrTemplate{contfoot-text}{normal}{续下页}
+\DefTblrTemplate{conthead-text}{normal}{续表}
+\SetTblrTemplate{caption-tag}{normal}
+\SetTblrTemplate{contfoot-text}{normal}
+\SetTblrTemplate{conthead-text}{normal}
 
 \newcommand{\faq}[1]{{\heiti #1}}
 
