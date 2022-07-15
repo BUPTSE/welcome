@@ -1,5 +1,5 @@
 \documentclass[UTF8]{ctexart}
-\usepackage{xeCJK}
+% \usepackage{xeCJK}
 
 \usepackage[left=31.8mm,right=31.8mm,top=25.4mm,bottom=25.4mm,]{geometry}
 \usepackage{color,xcolor,xecolor}
@@ -25,24 +25,31 @@
 \SetTblrTemplate{contfoot-text}{normal}
 \SetTblrTemplate{conthead-text}{normal}
 
-\newcommand{\faq}[1]{{\heiti #1}}
-
-\title{\textbf{北邮沙河生存手册R}}
-\author{北邮软件工程根据地\ 群\thanks{本QQ群的群号是934336833}}
-\date{Rev.2.0(pre-release), July 2022}
+\newcommand{\faq}[1]{\subsubsection*{#1}}
 
 \begin{document}
 
-\maketitle
-\section*{声明}
-\begin{center}
+\begin{titlepage}
+    \centering
+    \vspace*{\stretch{1}}
+    {\Huge\sffamily\bfseries 北邮沙河生存手册R} \\[6.5ex]
+    {\Large\sffamily\bfseries 北邮软件工程根据地\ 群} \\
+    \vspace{\stretch{3}}
+    {\large\sffamily v2.0(pre-release), July 2022}\\[1.5ex]
+    \vspace{\stretch{0.5}}
+\end{titlepage}
+\begin{titlepage}
+    \centering
+    {\Large\bfseries 声明}
+
+    本内容由“北邮软件工程根据地\ 群”的群友集体创作。本QQ群的群号是934336833。
+
     本内容以“CC BY-SA 4.0”许可证共享。要查看该许可证，可访问\\
     \href{https://creativecommons.org/licenses/by-sa/4.0/}{https://creativecommons.org/licenses/by-sa/4.0/}
 
     受相关政策变化影响，部分内容可能有失准确，请以学校方面要求为准。
-\end{center}
-\tableofcontents
-\newpage
+    \tableofcontents
+\end{titlepage}
 
 % 新生报到
 \input{tex/registration.tex}
