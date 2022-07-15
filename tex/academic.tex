@@ -13,7 +13,9 @@
     \begin{longtblr}[
         caption = 英语课程设置情况
     ]{
-        colspec = cclcc,
+        colspec = {X[3, c] X[3, c] X[9, l] X[2, c] X[2, c]},
+        rows = {m},
+        width = .85\linewidth,
         hlines,
         vlines,
     }
@@ -29,8 +31,7 @@
         \SetCell[r=6]{h} {提高/发展 \\ 目标} & \SetCell[r=3]{h} {第三学期 \\ 必修} & A 级：学术英语入门 & 2 & 2 \\
         & & B/C 级：英语听说 2 & 2 & 2 \\
         & & D 级：综合英语 3 & 2 & 2 \\
-        & \SetCell[r=3]{h} {第四学期 \\ 限定选修} & {A 级：下列课程八选一 \\（不含公众英语表达与沟通、\\学术英语入门）} & 2 & 2 \\
-        % 下面这行多少沾点摆烂了，，实在不知道该怎么搞
+        & \SetCell[r=3]{h} {第四学期 \\ 限定选修} & {A 级：下列课程八选一 \\（不含公众英语表达与沟通、学术英语入门）} & 2 & 2 \\
         & & {B/C 级：下列课程十选一 \\ ★ABC级打通排课 \\ \quad ●专门用途英语类：\\ \quad ①科技英语阅读与翻译 \\ \quad ②商务英语与国际交流 \\ \quad ③学术英语入门 \\ \quad ④实用英汉翻译 \\ \quad ⑤思辨阅读与写作 \\ \quad ●跨文化交际类：\\ \quad ⑥跨文化交际英语 \\ \quad ⑦情景英语视听说 \\ \quad ⑧英美影视英语 \\ \quad ⑨英美文化概况 \\ \quad ⑩公众英语表达与沟通} & 2 & 2 \\
         & & D 级：综合英语 4 & 2 & 2 \\
     \end{longtblr}
@@ -59,7 +60,8 @@
     \begin{longtblr}[
         caption = 德育分组成参考
     ]{
-        colspec = {X[2, c] X[3, l] X[1, c] X[6, l]},
+        colspec = {X[20, c] X[35, l] X[7, c] X[55, l]},
+        rows = {m},
         hlines,
         vlines,
     }
@@ -119,6 +121,7 @@
         caption = 奖学金与荣誉称号情况
     ]{
         colspec = {X[2, c] X[3, l] X[2, c] X[2, c]},
+        rows = {m},
         hlines,
         vlines,
     }
