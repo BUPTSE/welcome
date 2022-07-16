@@ -1,11 +1,17 @@
-\documentclass[UTF8]{ctexart}
-% \usepackage{xeCJK}
+\documentclass[a4paper]{article}
+\usepackage{xeCJK}
 
 \usepackage[left=31.8mm,right=31.8mm,top=25.4mm,bottom=25.4mm,]{geometry}
 \usepackage{color,xcolor,xecolor}
 
+\setCJKmainfont[ItalicFont={KaiTi}]{Source Han Serif SC}
+\setCJKsansfont{Source Han Sans SC}
+
 \xeCJKDeclareCharClass{CJK}{`①,`②,`③,`④,`⑤,`⑥,`⑦,`⑧,`⑨,`⑩,`⑪,`⑫,`⑬,`⑭,`⑮,`⑯,`⑰,`⑱,`⑲,`⑳,`☆,`★,`○,`●,`□,`■,`♂,`♀,`◇,`⋯}
 
+% \usepackage{titlesec}
+\usepackage{pdfpages}
+\usepackage{fancyhdr}
 \usepackage{graphicx}
 \usepackage{hyperref}
 \usepackage{tabularray}
@@ -26,56 +32,91 @@
 \SetTblrTemplate{conthead-text}{normal}
 
 \newcommand{\faq}[1]{\subsubsection*{#1}}
+\renewcommand{\contentsname}{目录}
+% \titleformat*{\section}{\centering\Large\bfseries}
+% \titleformat*{\subsubsection}{\sffamily}
 
 \begin{document}
+
+\includepdf{cover.pdf}
 
 \begin{titlepage}
     \centering
     \vspace*{\stretch{1}}
-    {\Huge\sffamily\bfseries 北邮沙河生存手册R} \\[6.5ex]
+    {\Huge\rmfamily\bfseries 北邮沙河生存手册R} \\[6.5ex]
     {\Large\sffamily 北邮软件工程根据地\ 群} \\
     \vspace{\stretch{3}}
     {\large\sffamily v2.0(pre-release), July 2022}\\[1.5ex]
     \vspace{\stretch{0.5}}
 \end{titlepage}
+
 \begin{titlepage}
     \centering
-    {\Large\bfseries 声明}
+    \section*{声明}
 
-    本内容由“北邮软件工程根据地\ 群”的群友集体创作。本QQ群的群号是934336833。
+    本作品由“北邮软件工程根据地\ 群”的群友集体创作。\\
+    可以在\href{https://github.com/BUPTSE/welcome}{此}获取本文档的源代码。
+
+    \smallskip
 
     本内容以“CC BY-SA 4.0”许可证共享。要查看该许可证，可访问\\
     \href{https://creativecommons.org/licenses/by-sa/4.0/}{https://creativecommons.org/licenses/by-sa/4.0/}
 
+    \smallskip
+
     受相关政策变化影响，部分内容可能有失准确，请以学校方面要求为准。
+
+    \bigskip
     \tableofcontents
 \end{titlepage}
 
+\pagestyle{fancy}
+\lhead{\small \leftmark}
+\chead{}
+\rhead{\small 北邮沙河生存手册R}
+\lfoot{}
+\cfoot{\thepage}
+\rfoot{}
+\renewcommand{\headrulewidth}{0.4pt}
+% \renewcommand{\footrulewidth}{0.4pt}
+
+
 % 新生报到
-\input{tex/registration.tex}
+\include{tex/registration.tex}
+\newpage
 
 % 校区环境
-\input{tex/campus.tex}
+\include{tex/campus.tex}
+\newpage
 
 % 住宿条件
-\input{tex/dormitory.tex}
+\include{tex/dormitory.tex}
+\newpage
 
 % 学业相关
-\input{tex/academic.tex}
+\include{tex/academic.tex}
+\newpage
 
 % 生活相关
-\input{tex/life.tex}
+\include{tex/life.tex}
+\newpage
 
 % 军训相关
-\input{tex/military-training.tex}
+\include{tex/military-training.tex}
+\newpage
 
 % 内网资源
-\input{tex/intranet.tex}
+\include{tex/intranet.tex}
+\newpage
 
 % 学生组织
-\input{tex/organization.tex}
+\include{tex/organization.tex}
+\newpage
 
 % 其他事项
-\input{tex/misc.tex}
+\include{tex/misc.tex}
+\newpage
+
+\includepdf{back.pdf}
 
 \end{document}
