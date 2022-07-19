@@ -28,7 +28,7 @@ jobs:
           root_file: main.tex
           latexmk_use_xelatex: true
           extra_fonts: |
-            ./01_SourceHanSerif.ttc
+            ./SourceHanSerif.ttc
             ./SourceHanSans.ttc
             ./lxgw-wenkai-v1.235.2/*.ttf
       - uses: actions/upload-artifact@v2
