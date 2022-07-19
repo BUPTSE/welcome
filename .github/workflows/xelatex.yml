@@ -13,9 +13,21 @@ jobs:
     runs-on: ubuntu-20.04
     steps:
       - name: Set up Git repository
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
+      - name: Install Fonts
+        run: |
+          wget https://github.com/lxgw/LxgwWenKai/releases/download/v1.235.2/lxgw-wenkai-v1.235.2.tar.gz
+          tar -xzvf lxgw-wenkai-v1.235.2.tar.gz
+          wget https://github.com/adobe-fonts/source-han-sans/releases/download/2.004R/SourceHanSans.ttc.zip
+          unzip SourceHanSans.ttc.zip -d source-han-sans
+          wget https://github.com/adobe-fonts/source-han-serif/releases/download/2.001R/01_SourceHanSerif.ttc.zip
+          unzip 01_SourceHanSerif.ttc.zip -d source-han-serif
       - name: Compile LaTeX document
         uses: xu-cheng/latex-action@v2
         with:
           root_file: main.tex
           latexmk_use_xelatex: true
+          extra_fonts: |
+            ./01_SourceHanSerif.ttc
+            ./SourceHanSans.ttc
+            ./lxgw-wenkai-v1.235.2/*.ttf
