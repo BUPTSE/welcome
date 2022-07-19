@@ -31,3 +31,7 @@ jobs:
             ./01_SourceHanSerif.ttc
             ./SourceHanSans.ttc
             ./lxgw-wenkai-v1.235.2/*.ttf
+      - uses: actions/upload-artifact@v2
+        with:
+          name: PDF
+          path: main.pdf
