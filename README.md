@@ -12,7 +12,9 @@
 
 如果您发现本项目中有内容不准确或已经过时，我们随时欢迎提出 issue 或发起 PR 来为本项目做出贡献。
 
-使用一般的 $\LaTeX$ 环境都可以编辑本项目，具体来说，我们推荐使用 MikTex 或 Tex Live 发行版。
+使用一般的 $\LaTeX$ 环境并安装字体后就可以编辑本项目。具体来说，我们推荐使用 MikTex 发行版。
+
+本项目使用的字体为：[思源宋体](https://github.com/adobe-fonts/source-han-serif)、[思源黑体](https://github.com/adobe-fonts/source-han-sans)和[霞鹜文楷](https://github.com/lxgw/LxgwWenKai)。
 
 ## 共享和演绎
 
