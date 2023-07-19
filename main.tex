@@ -1,5 +1,5 @@
 \documentclass[a4paper]{article}
-\usepackage{xeCJK,fontspec}
+\usepackage{xeCJK,fontspec, booktabs}
 
 \usepackage{fancyhdr,indentfirst}
 \usepackage[left=31.8mm,right=31.8mm,top=25.4mm,bottom=25.4mm]{geometry}
@@ -45,29 +45,37 @@
     {\Huge\rmfamily\bfseries 北邮沙河生存手册R} \\[6.5ex]
     {\Large\sffamily 北邮软件工程根据地\ 群} \\
     \vspace{\stretch{3}}
-    {\large\ttfamily v2.1.0, August 2022}\\[1.5ex]
+    {\large\ttfamily Snapshot 23w29a, July 2023}\\[1.5ex]
     \vspace{\stretch{0.5}}
 \end{titlepage}
 
-\begin{titlepage}
-    \centering
-    \section*{声明}
+\newpage
+\begin{center}
+\section*{声明}
 
-    本作品由“北邮软件工程根据地\ 群”的群友集体创作。\\
-    可以在\href{https://github.com/BUPTSE/welcome}{此}获取本文档的源代码。
+本作品由“北邮软件工程根据地\ 群”的群友集体创作。\\
+可以在\href{https://github.com/BUPTSE/welcome}{此}获取本文档的源代码。
 
-    \smallskip
+\smallskip
 
-    本内容以“CC BY-SA 4.0”许可证共享。要查看该许可证，可访问\\
-    \href{https://creativecommons.org/licenses/by-sa/4.0/}{https://creativecommons.org/licenses/by-sa/4.0/}
+本内容以“CC BY-SA 4.0”许可证共享。要查看该许可证，可访问\\
+\href{https://creativecommons.org/licenses/by-sa/4.0/}{https://creativecommons.org/licenses/by-sa/4.0/}
 
-    \smallskip
+\smallskip
 
-    受相关政策变化影响，部分内容可能有失准确，请以学校方面要求为准。
+受相关政策变化影响，部分内容可能有失准确，请以学校方面要求为准。
 
-    \bigskip
-    \tableofcontents
-\end{titlepage}
+\bigskip
+
+\end{center}
+
+\newpage
+%\raggedright
+\setcounter{page}{1}
+\tableofcontents
+
+\newpage
+\setcounter{page}{1}
 
 \pagestyle{fancy}
 \lhead{\small \leftmark}
@@ -79,42 +87,32 @@
 \renewcommand{\headrulewidth}{0.4pt}
 % \renewcommand{\footrulewidth}{0.4pt}
 
-
-% 新生报到
+% 1.新生报到
 \include{tex/registration.tex}
-\newpage
 
-% 校区环境
+% 2.校区环境
 \include{tex/campus.tex}
-\newpage
 
-% 住宿条件
+% 3.住宿条件
 \include{tex/dormitory.tex}
-\newpage
 
-% 学业相关
+% 4.学业相关
 \include{tex/academic.tex}
-\newpage
 
-% 生活相关
+% 5.生活相关
 \include{tex/life.tex}
-\newpage
 
-% 军训相关
+% 6.军训相关
 \include{tex/military-training.tex}
-\newpage
 
-% 内网资源
+% 7.内网资源
 \include{tex/intranet.tex}
-\newpage
 
-% 学生组织
+% 8.学生组织
 \include{tex/organization.tex}
-\newpage
 
-% 其他事项
+% 9.其他事项
 \include{tex/misc.tex}
-\newpage
 
 \includepdf{back.pdf}
 
