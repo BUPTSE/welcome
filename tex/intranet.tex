@@ -4,11 +4,11 @@
 
 BUPT的校园网也许不是最好的，但一定是最便宜的（指完全免费）。
 
-北邮的几个校区共用一个超过40Gbps的聚合出口带宽，一般来说你的设备的网速都可以跑满无线或者有线连接本身的带宽，据称，即使在最高峰的时候，出口带宽也从未用满过（不过不要指望这会使你抢课的时候拥有什么优势）。
+北邮的几个校区共用一个超过60Gbps的聚合出口带宽，一般来说你的设备的网速都可以跑满无线或者有线连接本身的带宽，据称，即使在最高峰的时候，出口带宽也从未用满过（不过不要指望这会使你抢课的时候拥有什么优势）。
 
-基本上沙河校区的建筑内都有WiFi的覆盖，室外也在逐步增加覆盖。在校园内覆盖了无线网络的区域，一般可以搜索到BUPT-mobile、BUPT-portal和BUPT-guest三个网络。一般手机平板等移动设备连接mobile，PC端连接portal（其实随便连都行），而guest不使用。初次使用需要在校园网服务网站上用学号登录，具体的初始密码会另行通知大家。
+沙河校区的建筑室内都有WiFi的覆盖，室外在楼宇附近也有覆盖。在校园内覆盖了无线网络的区域，一般可以搜索到BUPT-mobile、BUPT-portal等SSID。BUPT-mobile使用WPA2-Enterprise(802.11x)加密和认证，BUPT-portal使用Captive Portal认证。BUPT-mobile关闭了2.4Ghz频段，因此通常推荐连接BUPT-mobile以避开跳频等问题，获得更好的上网体验。
 
-在校外必须使用学校的VPN才能访问内网的资源。可以使用\href{https://webvpn.bupt.edu.cn/}{WebVPN}，或者\href{https://vpn2.bupt.edu.cn/portal/#!/login}{vpn2},后者登陆后有客户端可供下载，目前看来vpn2比webvpn更不容易崩，（实际体现在抢课时的巨大差别）不过也不排除是新vpn使用人数尚少的原因。
+在校外必须使用学校的VPN才能访问内网的资源。可以使用{https://vpn.bupt.edu.cn/portal/#!/login}{aTrust}，或者bug多多兼容性堪忧的\href{https://webvpn.bupt.edu.cn/}{WebVPN}。
 
 \subsection{常用网站}
 
@@ -16,7 +16,7 @@ BUPT的校园网也许不是最好的，但一定是最便宜的（指完全免�
 \begin{itemize}
     \item \href{https://www.bupt.edu.cn/}{北邮官网}：北京邮电大学的官方网站。
     \item \href{https://webvpn.bupt.edu.cn/}{WebVPN系统}：使用浏览器访问内网资源，无需安装客户端和插件，支持电脑和手机直接使用。
-    \item \href{https://vpn2.bupt.edu.cn/portal/#!/login}{aTrust}：同样是校园网vpn，可以下载客户端，相比于webvpn使用更加便捷，登陆密码为企业微信实时更新的一串数字。
+    \item \href{https://vpn.bupt.edu.cn/}{aTrust}：校园网VPN，可以下载客户端，相比于WebVPN使用更加便捷，登陆密码为企业微信实时更新的一串数字。
     \item \href{https://ucloud.bupt.edu.cn/}{云邮教学空间}：新开通的一个教学平台，部分课程会在里面发放资料、提交作业甚至考试。根据反馈，这个平台还有很多bug，不少同学被坑。
     \item \href{https://libcon.bupt.edu.cn/}{电子资源统一访问系统}：可以在校外访问知网、万方、SCI等多个数据库，还是很方便的。
 \end{itemize}
@@ -24,7 +24,8 @@ BUPT的校园网也许不是最好的，但一定是最便宜的（指完全免�
 \subsubsection*{需要通过VPN或在校园网环境下访问的内网资源}
 \begin{itemize}
     \item \href{http://my.bupt.edu.cn/}{信息门户}：发布校内通知、新闻等，也整合了各个网站系统的入口。勤看信息门户有助于不错过重要通知。
-    \item \href{http://10.3.8.216/index}{校园网认证网关}：通过BUPT-portal上网需要登录，一般会自动跳转到此。
+    % \item \href{http://10.3.8.216/index}{校园网认证网关}：通过BUPT-portal上网需要登录，一般会自动跳转到此。
+    % 216 认证需要带参数跳转，不可以直接访问
     \item \href{https://jwgl.bupt.edu.cn/}{本科生教务系统}：查课表考表成绩学分、抢课退补选等等，都在教务系统。
     \item \href{https://service.bupt.edu.cn/}{网上服务大厅}：线上办理各种手续的地方。\sout{甚至可以在线申请退学}
     \item \href{https://iclass.bupt.edu.cn/}{“爱课堂”教学平台}：部分科目的老师用来进行线上分发教学资料、收发作业和在线考试的平台。
@@ -73,3 +74,7 @@ BitTorrent是一种资源分享协议，它的宗旨是“我为人人，人人�
 在符合要求的网络环境（例如校园网）下，就可以登录BYRBT。一个学号一般只能注册一个BT账号，所以一定要珍惜你的账号，不要因为滥用下载和随意外传资源而被封号。账号长时间不使用也会被删除（这个功能暂时没有开启），但是你可以手动“封存”它，在放假或者长时间不在学校前记得先封存账号，回到学校后解封它。
 
 BYRBT是一个PT站，PT（Private Tracker）是一种基于私有BT Tracker服务器的资源传播形式，经授权的用户使用受允许的客户端进行种子制作与下载。要使用BYRPT提供的服务，就必须遵守站内的相关规则。注册并登录后你可以在网站上看到规则和常见问题，请仔细阅读。
+
+\faq{我为什么上不了网/我为什么连不上校园网/为什么校园网这么卡}
+
+你可以使用\href{https://buptnet.icu}{这个平台}进行自助诊断，以及通过企业微信-信息帮和62283039联系信息化技术中心。
