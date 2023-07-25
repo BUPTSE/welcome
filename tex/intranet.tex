@@ -4,11 +4,29 @@
 
 BUPT的校园网也许不是最好的，但一定是最便宜的（指完全免费）。
 
-北邮的几个校区共用一个超过60Gbps的聚合出口带宽，一般来说你的设备的网速都可以跑满无线或者有线连接本身的带宽，据称，即使在最高峰的时候，出口带宽也从未用满过（不过不要指望这会使你抢课的时候拥有什么优势）。
+北邮的几个校区\footnote{海南校区的情况暂且不明}共用一个超过60Gbps的聚合出口带宽，一般来说你的设备的网速都可以跑满无线或者有线连接本身的带宽，据称，即使在最高峰的时候，出口带宽也从未用满过（不过不要指望这会使你抢课的时候拥有什么优势）。
 
 沙河校区的建筑室内都有WiFi的覆盖，室外在楼宇附近也有覆盖。在校园内覆盖了无线网络的区域，一般可以搜索到BUPT-mobile、BUPT-portal等SSID。BUPT-mobile使用WPA2-Enterprise(802.11x)加密和认证，BUPT-portal使用Captive Portal认证。BUPT-mobile关闭了2.4Ghz频段，因此通常推荐连接BUPT-mobile以避开跳频等问题，获得更好的上网体验。
 
 在校外必须使用学校的VPN才能访问内网的资源。可以使用\href{https://vpn.bupt.edu.cn/}{aTrust}，或者bug多多兼容性堪忧的\href{https://webvpn.bupt.edu.cn/}{WebVPN}。
+
+\subsubsection*{网关账号和密码}
+
+师生在校期间拥有以学工号为账号的网关账号。这一账号独立于统一认证及教务系统的账号，用于登入校园网、VPN等系统。可以在\href{https://netaccount.bupt.edu.cn/}{校园网自服务系统}查看账户状态及修改密码。
+
+\emph{注意：绝对不要把自己的校园网账号借与他人！网关账号密码直接关系到连接内网的权限，联网操作若造成破坏均由账号所有人承担责任！}
+
+\subsubsection*{连接到BUPT-Mobile}
+
+首先下载并安装北邮校园网用于本地网络认证的\href{https://github.com/FredericDT/BUPTCampusNetworkManual/blob/master/Wireless/XTC-BUPT-mobile-assets/BUPT-Local-Server-Certificate.crt}{证书}，命名为“BUPT Local Server Certificate”并信任该证书。
+
+然后，连接到BUPT-mobile。连接时，在CA证书一栏选择刚刚安装的“BUPT Local Server Certificate”，域名也填写“BUPT Local Server Certificate”，EAP方法选择“PEAP”，阶段2身份验证选择“MSCHAPV2”，身份和密码分别填写学号和网关账号密码，点击连接即可。
+
+\subsubsection*{连接到BUPT-Portal}
+
+一些设备出于种种原因可能无法连接到BUPT-mobile，这时可以使用BUPT-portal。
+
+连接到BUPT-portal后，访问任一plain HTTP网站如\href{http://www.msftconnecttest.com/redirect}{msft}即可跳转到认证页面，输入网关账号密码即可。
 
 \subsection{常用网站}
 
@@ -24,8 +42,6 @@ BUPT的校园网也许不是最好的，但一定是最便宜的（指完全免�
 \subsubsection*{需要通过VPN或在校园网环境下访问的内网资源}
 \begin{itemize}
     \item \href{http://my.bupt.edu.cn/}{信息门户}：发布校内通知、新闻等，也整合了各个网站系统的入口。勤看信息门户有助于不错过重要通知。
-    % \item \href{http://10.3.8.216/index}{校园网认证网关}：通过BUPT-portal上网需要登录，一般会自动跳转到此。
-    % 216 认证需要带参数跳转，不可以直接访问
     \item \href{https://jwgl.bupt.edu.cn/}{本科生教务系统}：查课表考表成绩学分、抢课退补选等等，都在教务系统。
     \item \href{https://service.bupt.edu.cn/}{网上服务大厅}：线上办理各种手续的地方。\sout{甚至可以在线申请退学}
     \item \href{https://iclass.bupt.edu.cn/}{“爱课堂”教学平台}：部分科目的老师用来进行线上分发教学资料、收发作业和在线考试的平台。
@@ -51,7 +67,6 @@ BUPT的校园网也许不是最好的，但一定是最便宜的（指完全免�
     \item \href{https://www.icourse163.org/learn}{中国大学MOOC}：疫情期间才引入的网课平台，只有部分老师在里面开课。不过上面有很多其他大学的老师开放的在线课程，可以拓展一下知识面或作为课堂内容的补充。
 \end{itemize}
 以上平台有自己的App。
-
 
 \faq{如何利用学校提供的学术资源？}
 
