@@ -13,9 +13,9 @@
 \xeCJKDeclareCharClass{CJK}{`①,`②,`③,`④,`⑤,`⑥,`⑦,`⑧,`⑨,`⑩,`⑪,`⑫,`⑬,`⑭,`⑮,`⑯,`⑰,`⑱,`⑲,`⑳,`☆,`★,`○,`●,`□,`■,`♂,`♀,`◇,`⋯}
 
 \usepackage{pdfpages,hyperref}
-\usepackage{tabularray}
+\usepackage{tabularray,booktabs}
 \usepackage[normalem]{ulem}
-\usepackage{amsmath, amsfonts}
+\usepackage{amsmath,amsfonts}
 
 \hypersetup{
     colorlinks,
@@ -32,11 +32,12 @@
 \SetTblrTemplate{conthead-text}{normal}
 
 \newcommand{\faq}[1]{\subsubsection*{#1}}
-\renewcommand{\contentsname}{目录}
+\renewcommand{\contentsname}{\centering 目\ 录}
 \renewcommand{\baselinestretch}{1.25}
 
 \begin{document}
 
+\pagenumbering{gobble}
 \includepdf{cover.pdf}
 
 \begin{titlepage}
@@ -45,30 +46,37 @@
     {\Huge\rmfamily\bfseries 北邮沙河生存手册R} \\[6.5ex]
     {\Large\sffamily 北邮软件工程根据地\ 群} \\
     \vspace{\stretch{3}}
-    {\large\ttfamily v2.1.0, August 2022}\\[1.5ex]
+    {\large\ttfamily v3.0.0, July 2023}\\[1.5ex]
     \vspace{\stretch{0.5}}
 \end{titlepage}
 
 \begin{titlepage}
-    \centering
-    \section*{声明}
+    \begin{center}
+        \section*{声\ 明}
 
-    本作品由“北邮软件工程根据地\ 群”的群友集体创作。\\
-    可以在\href{https://github.com/BUPTSE/welcome}{此}获取本文档的源代码。
+        本作品由“北邮软件工程根据地\ 群”的群友集体创作。\\
+        可以在\href{https://github.com/BUPTSE/welcome}{此}获取源代码。
 
-    \smallskip
+        \medskip
 
-    本内容以“CC BY-SA 4.0”许可证共享。要查看该许可证，可访问\\
-    \href{https://creativecommons.org/licenses/by-sa/4.0/}{https://creativecommons.org/licenses/by-sa/4.0/}
+        本内容以“CC BY-SA 4.0”许可证共享。要查看该许可证，可访问\\
+        \href{https://creativecommons.org/licenses/by-sa/4.0/}{https://creativecommons.org/licenses/by-sa/4.0/}
 
-    \smallskip
+        \medskip
 
-    受相关政策变化影响，部分内容可能有失准确，请以学校方面要求为准。
+        受相关政策变化影响，部分内容可能有失准确，请以学校方面要求为准。
 
-    \bigskip
+        \bigskip
+
+    \end{center}
+% \end{titlepage}
+
+% \begin{titlepage}
+    % \raggedright
     \tableofcontents
 \end{titlepage}
 
+\pagenumbering{arabic}
 \pagestyle{fancy}
 \lhead{\small \leftmark}
 \chead{}
@@ -79,43 +87,34 @@
 \renewcommand{\headrulewidth}{0.4pt}
 % \renewcommand{\footrulewidth}{0.4pt}
 
-
 % 新生报到
 \include{tex/registration.tex}
-\newpage
 
 % 校区环境
 \include{tex/campus.tex}
-\newpage
 
 % 住宿条件
 \include{tex/dormitory.tex}
-\newpage
-
-% 学业相关
-\include{tex/academic.tex}
-\newpage
 
 % 生活相关
 \include{tex/life.tex}
-\newpage
+
+% 学业相关
+\include{tex/academic.tex}
 
 % 军训相关
 \include{tex/military-training.tex}
-\newpage
 
 % 内网资源
 \include{tex/intranet.tex}
-\newpage
 
 % 学生组织
 \include{tex/organization.tex}
-\newpage
 
 % 其他事项
 \include{tex/misc.tex}
-\newpage
 
+\pagenumbering{gobble}
 \includepdf{back.pdf}
 
 \end{document}

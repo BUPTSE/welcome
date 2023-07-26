@@ -1,0 +1,42 @@
+name: 'Build Document'
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch: {}
+  pull_request:
+    branches:
+      - main
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+      - name: Tectonic Cache
+        uses: actions/cache@v3
+        with:
+          path: ~/.cache/Tectonic
+          key: ${{ runner.os }}-tectonic-${{ hashFiles('**/*.tex') }}
+          restore-keys: |
+            ${{ runner.os }}-tectonic-
+      - uses: wtfjoke/setup-tectonic@v2
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+      - name: Install fonts
+        run: |
+          wget -nv https://github.com/lxgw/LxgwWenKai/releases/download/v1.300/lxgw-wenkai-v1.300.tar.gz
+          mkdir /usr/share/fonts/lxgw-wenkai
+          tar -xzvf lxgw-wenkai-v1.300.tar.gz -C /usr/share/fonts/lxgw-wenkai
+          wget -nv https://github.com/adobe-fonts/source-han-sans/releases/download/2.004R/SourceHanSans.ttc.zip
+          unzip SourceHanSans.ttc.zip -d /usr/share/fonts/source-han-sans
+          wget -nv https://github.com/adobe-fonts/source-han-serif/releases/download/2.001R/01_SourceHanSerif.ttc.zip
+          unzip 01_SourceHanSerif.ttc.zip -d /usr/share/fonts/source-han-serif
+          fc-cache -fv
+      - name: Run Tectonic
+        run: tectonic main.tex
+      - name: Upload pdf
+        uses: actions/upload-artifact@v3
+        with:
+          name: main
+          path: main.pdf
