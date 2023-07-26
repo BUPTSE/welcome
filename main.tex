@@ -1,5 +1,5 @@
 \documentclass[a4paper]{article}
-\usepackage{xeCJK,fontspec,booktabs}
+\usepackage{xeCJK,fontspec}
 
 \usepackage{fancyhdr,indentfirst}
 \usepackage[left=31.8mm,right=31.8mm,top=25.4mm,bottom=25.4mm]{geometry}
@@ -13,7 +13,7 @@
 \xeCJKDeclareCharClass{CJK}{`①,`②,`③,`④,`⑤,`⑥,`⑦,`⑧,`⑨,`⑩,`⑪,`⑫,`⑬,`⑭,`⑮,`⑯,`⑰,`⑱,`⑲,`⑳,`☆,`★,`○,`●,`□,`■,`♂,`♀,`◇,`⋯}
 
 \usepackage{pdfpages,hyperref}
-\usepackage{tabularray}
+\usepackage{tabularray,booktabs}
 \usepackage[normalem]{ulem}
 \usepackage{amsmath,amsfonts}
 
@@ -87,31 +87,31 @@
 \renewcommand{\headrulewidth}{0.4pt}
 % \renewcommand{\footrulewidth}{0.4pt}
 
-% 1.新生报到
+% 新生报到
 \include{tex/registration.tex}
 
-% 2.校区环境
+% 校区环境
 \include{tex/campus.tex}
 
-% 3.住宿条件
+% 住宿条件
 \include{tex/dormitory.tex}
 
-% 4.生活相关
+% 生活相关
 \include{tex/life.tex}
 
-% 5.学业相关
+% 学业相关
 \include{tex/academic.tex}
 
-% 6.军训相关
+% 军训相关
 \include{tex/military-training.tex}
 
-% 7.内网资源
+% 内网资源
 \include{tex/intranet.tex}
 
-% 8.学生组织
+% 学生组织
 \include{tex/organization.tex}
 
-% 9.其他事项
+% 其他事项
 \include{tex/misc.tex}
 
 \pagenumbering{gobble}
