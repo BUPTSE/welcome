@@ -23,6 +23,16 @@ jobs:
       - uses: wtfjoke/setup-tectonic@v2
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
+      - name: Install fonts
+        run: |
+          wget https://github.com/lxgw/LxgwWenKai/releases/download/v1.300/lxgw-wenkai-v1.300.tar.gz
+          mkdir /usr/share/fonts/lxgw-wenkai
+          tar -xzvf lxgw-wenkai-v1.300.tar.gz -C /usr/share/fonts/lxgw-wenkai
+          wget https://github.com/adobe-fonts/source-han-sans/releases/download/2.004R/SourceHanSans.ttc.zip
+          unzip SourceHanSans.ttc.zip -d /usr/share/fonts/source-han-sans
+          wget https://github.com/adobe-fonts/source-han-serif/releases/download/2.001R/01_SourceHanSerif.ttc.zip
+          unzip 01_SourceHanSerif.ttc.zip -d /usr/share/fonts/source-han-serif
+          fc-cache -fv
       - name: Run Tectonic
         run: tectonic main.tex
       - name: Upload pdf
