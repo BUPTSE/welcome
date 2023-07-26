@@ -16,8 +16,8 @@ jobs:
         uses: actions/checkout@v3
       - name: Install Fonts
         run: |
-          wget https://github.com/lxgw/LxgwWenKai/releases/download/v1.235.2/lxgw-wenkai-v1.235.2.tar.gz
-          tar -xzvf lxgw-wenkai-v1.235.2.tar.gz
+          wget https://github.com/lxgw/LxgwWenKai/releases/download/v1.300/lxgw-wenkai-v1.300.tar.gz
+          tar -xzvf lxgw-wenkai-v1.300.tar.gz
           wget https://github.com/adobe-fonts/source-han-sans/releases/download/2.004R/SourceHanSans.ttc.zip
           unzip SourceHanSans.ttc.zip -d source-han-sans
           wget https://github.com/adobe-fonts/source-han-serif/releases/download/2.001R/01_SourceHanSerif.ttc.zip
@@ -28,10 +28,10 @@ jobs:
           root_file: main.tex
           latexmk_use_xelatex: true
           extra_fonts: |
-            ./lxgw-wenkai-v1.235.2/*.ttf
+            ./lxgw-wenkai-v1.300/*.ttf
             ./source-han-sans/SourceHanSans.ttc
             ./source-han-serif/SourceHanSerif.ttc
-      - uses: actions/upload-artifact@v2
+      - uses: actions/upload-artifact@v3
         with:
           name: PDF
           path: main.pdf
