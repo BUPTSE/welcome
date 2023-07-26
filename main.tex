@@ -1,5 +1,5 @@
 \documentclass[a4paper]{article}
-\usepackage{xeCJK,fontspec, booktabs}
+\usepackage{xeCJK,fontspec,booktabs}
 
 \usepackage{fancyhdr,indentfirst}
 \usepackage[left=31.8mm,right=31.8mm,top=25.4mm,bottom=25.4mm]{geometry}
@@ -15,7 +15,7 @@
 \usepackage{pdfpages,hyperref}
 \usepackage{tabularray}
 \usepackage[normalem]{ulem}
-\usepackage{amsmath, amsfonts}
+\usepackage{amsmath,amsfonts}
 
 \hypersetup{
     colorlinks,
@@ -37,6 +37,7 @@
 
 \begin{document}
 
+\pagenumbering{gobble}
 \includepdf{cover.pdf}
 
 \begin{titlepage}
@@ -75,6 +76,7 @@
     \tableofcontents
 \end{titlepage}
 
+\pagenumbering{arabic}
 \pagestyle{fancy}
 \lhead{\small \leftmark}
 \chead{}
@@ -112,6 +114,7 @@
 % 9.其他事项
 \include{tex/misc.tex}
 
+\pagenumbering{gobble}
 \includepdf{back.pdf}
 
 \end{document}
