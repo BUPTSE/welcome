@@ -6,7 +6,7 @@ BUPT的校园网也许不是最好的，但一定是最便宜的（指完全免�
 
 北邮的几个校区\footnote{海南校区的情况暂且不明}共用超过60Gbps的聚合出口带宽\footnote{移动40Gbps，电信20Gbps，CERNET 1Gbps，CERNET2 10Gbps}，一般来说你的设备的网速都可以跑满无线或者有线连接本身的带宽，据称，即使在最高峰的时候，出口带宽也从未用满过（不过不要指望这会使你抢课的时候拥有什么优势）。
 
-沙河校区的建筑室内都有WiFi的覆盖，室外在楼宇附近也有覆盖。在校园内覆盖了无线网络的区域，一般可以搜索到BUPT-mobile、BUPT-portal等SSID。BUPT-mobile使用WPA2-Enterprise(802.11x)加密和认证，BUPT-portal使用Captive Portal认证。BUPT-mobile关闭了2.4Ghz频段，因此通常推荐连接BUPT-mobile以避开跳频等问题，获得更好的上网体验。
+沙河校区的建筑室内都有WiFi的覆盖，室外在楼宇附近也有覆盖。在校园内覆盖了无线网络的区域，一般可以搜索到BUPT-mobile、BUPT-portal等SSID。BUPT-mobile使用WPA2-Enterprise(802.11x)加密和认证，BUPT-portal使用Captive Portal认证。BUPT-mobile关闭了2.4GHz频段，因此通常推荐连接BUPT-mobile以避开跳频等问题，获得更好的上网体验。
 
 在校外必须使用学校的VPN才能访问内网的资源。可以使用\href{https://vpn.bupt.edu.cn/}{aTrust}（推荐），或者bug多多兼容性堪忧的\href{https://webvpn.bupt.edu.cn/}{WebVPN}。
 
@@ -16,13 +16,13 @@ BUPT的校园网也许不是最好的，但一定是最便宜的（指完全免�
 
 \emph{注意：绝对不要把自己的校园网账号借与他人！网关账号密码直接关系到连接内网的权限，联网操作若造成破坏均由账号所有人承担责任！}
 
-\subsubsection*{连接到BUPT-Mobile}
+\subsubsection*{连接到BUPT-mobile}
 
 首先下载并安装北邮校园网用于本地网络认证的\href{https://github.com/FredericDT/BUPTCampusNetworkManual/blob/master/Wireless/XTC-BUPT-mobile-assets/BUPT-Local-Server-Certificate.crt}{证书}，命名为“BUPT Local Server Certificate”并信任该证书。
 
 然后，连接到BUPT-mobile。连接时，在CA证书一栏选择刚刚安装的“BUPT Local Server Certificate”，域名也填写“BUPT Local Server Certificate”，EAP方法选择“PEAP”，阶段2身份验证选择“MSCHAPV2”，身份和密码分别填写学号和网关账号密码，点击连接即可。
 
-\subsubsection*{连接到BUPT-Portal}
+\subsubsection*{连接到BUPT-portal}
 
 一些设备出于种种原因可能无法连接到BUPT-mobile，这时可以使用BUPT-portal。
 
@@ -70,9 +70,21 @@ BUPT的校园网也许不是最好的，但一定是最便宜的（指完全免�
 
 \subsection*{常见问题}
 
+\faq{打印机等设备如何连接WiFi？}
+
+如果支持5GHz频段与账号密码连接（如HomePod），那可以直接连接BUPT-mobile使用，但其中的部分功能可能不受支持。
+
+如果只支持2.4GHz频段，则是无法连接校园网使用的，如必须则可以连接Windows或其他设备热点使用，或是自行购置路由器配置。
+
 \faq{如何利用学校提供的学术资源？}
 
-学校的图书馆系统中有“数据库导航”链接，由此可以进入查看学校所购买的学术资源数据库，包括（国内的）万方、知网和（国外的）IEL、Nature等。在校内（使用校园网的情况下），你可以直接进入这些网站并下载所需要的资料；在校外，你需要选择校外登录等方式，通过登录认证从而领用上述资源。以知网为例：
+学校的图书馆系统中有“数据库导航”链接，由此可以进入查看学校所购买的学术资源数据库，包括：
+
+国内：万方、知网等
+
+国外：IEL、Nature等
+
+在校内（使用校园网的情况下），你可以直接进入这些网站并下载所需要的资料；在校外，你需要选择校外登录等方式，通过登录认证从而领用上述资源。以知网为例：
 
 \begin{center}
     \includegraphics[width=0.4\textwidth]{images/cnki-login.png}
@@ -82,7 +94,9 @@ BUPT的校园网也许不是最好的，但一定是最便宜的（指完全免�
 
 \faq{如何注册北邮人论坛？有什么用？}
 
-使用你的北邮校园网帐号注册即可，一个学生号最多能注册三个账号，要经过手机验证后才能发帖。除了直接访问网站，也可以下载北邮人论坛的App，安卓、苹果都有，但体验不算太好。北邮人论坛是校内最重要的论坛，有学校老师入驻以确保言论合法且不具有攻击性。你可以在这里看到保研资讯、校内新闻、经验技术分享等等，是获取校内信息的重要途径。
+打开论坛网址，使用你的北邮校园网帐号注册即。一个学生号最多能注册三个账号，要经过手机验证后才能发帖。除了直接访问网站，也可以下载App“北邮人论坛”，安卓、苹果都有，但体验不算太好。
+
+北邮人论坛是校内最重要的论坛，有学校老师入驻以确保言论合法且不具有攻击性。你可以在这里看到保研资讯、校内新闻、经验技术分享甚至娱乐内容等等，是校内沟通交流、获取校内信息的重要途径。
 
 \faq{BYRBT是什么？如何使用？}
 
@@ -94,4 +108,4 @@ BYRBT是一个PT站，PT（Private Tracker）是一种基于私有BT Tracker服�
 
 \faq{我为什么上不了网/我为什么连不上校园网/为什么校园网这么卡}
 
-你可以使用\href{https://buptnet.icu}{这个平台}进行自助诊断（仅限内网访问），以及通过企业微信-信息帮和62283039报修电话联系信息化技术中心。
+你可以使用\href{https://buptnet.icu}{这个平台}进行自助诊断（仅限内网访问），以及通过企业微信-信息帮和62283039报修电话联系信息化技术中心。也同样可以加入网络反馈QQ群进行反馈，群号是835973564。
